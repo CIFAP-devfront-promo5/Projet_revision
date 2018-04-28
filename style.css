@@ -1,0 +1,17 @@
+body {
+    background-image: url("images/cifap.jpg");
+    background-size: cover;
+    font-family: Verdana;
+    text-align: left;
+}
+
+
+#container {
+    margin:15px auto;
+    padding:0;
+    width:1200px;
+    background-color: #f6f6f6;
+    display:block;
+    font-size: 0;
+    height:1200px;
+}
