@@ -1,17 +1,48 @@
 body {
-    background-image: url("images/cifap.jpg");
     background-size: cover;
-    font-family: Verdana;
+    font-family: Arial;
     text-align: left;
 }
-
-
 #container {
-    margin:15px auto;
+    margin:0px auto;
+    margin-top: 0px;
     padding:0;
     width:1000px;
     background-color: #f6f6f6;
     display:block;
     font-size: 0;
     height:1200px;
+    background-image: url("images/cifap.jpg");
+    background-repeat: no-repeat;
+}
+header{
+    height: 100px;
+    width: 1000px;
+    background-color: #fff;
+    padding: 20px 0;
+}
+header img{
+    vertical-align: top;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+}
+header h1{
+    color: #000;
+    font-size: 50px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin-left: 40px;
+}
+ul{
+    vertical-align: top;
+    margin:500px 0;
+    font-size:0;
+    padding:0;
+}
+li{
+    font-size: 25px;
+    font-weight: bold;
+
 }
