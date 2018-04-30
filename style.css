@@ -49,12 +49,6 @@ body {
             width:100%;
         }
 
-        #container > h2 {
-            font-size: 28px;
-            text-align: center;
-            color: #101576;
-            height:100%;
-        }
 
         #container > aside {
             display: inline-block;
@@ -62,6 +56,16 @@ body {
             background-color: #e2e1e0;
             height:540px;
         }
+
+            aside > h2 {
+                font-size: 28px;
+                text-align: center;
+                height:100%;
+                background-color: #101576;
+                color: white;
+                margin: 0;
+                padding: 10px;
+            }
 
             aside > ul{
                 vertical-align: top;
@@ -71,25 +75,25 @@ body {
                 list-style-type: none;
             }
 
-            aside > ul > li{
-                font-size: 25px;
-                font-weight: bold;
-            }
+                aside > ul > li{
+                    font-size: 25px;
+                    font-weight: bold;
+                }
 
 
-            aside > ul > li > a {
-                text-decoration: none;
-                text-align: center;
-                display:block;
-                padding: 5px 10px;
-                width: 100%;
-                box-sizing: border-box;
-            }
+                    aside > ul > li > a {
+                        text-decoration: none;
+                        text-align: center;
+                        display:block;
+                        padding: 5px 10px;
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
 
 
-            aside > ul > li > a:hover {
-                background-color: #d8a0f1;
-            }
+                    aside > ul > li > a:hover {
+                        background-color: #d8a0f1;
+                    }
 
         main {
             width:80%;
@@ -105,10 +109,6 @@ body {
 
 
 h2 {
-    text-align: center;
-    background-color: #101576;
-    color: white;
-    margin: 0;
-    padding: 10px;
+
 
 }
