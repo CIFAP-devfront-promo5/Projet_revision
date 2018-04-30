@@ -6,4 +6,3 @@ CIFAP 2018.
 Participants :
 Vincent.
 ...
-Jean
