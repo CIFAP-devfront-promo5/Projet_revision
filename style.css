@@ -30,6 +30,7 @@ body {
             vertical-align: top;
             display: inline-block;
             text-align: center;
+            letter-spacing: 4px;
             margin-left: 40px;
             width:80%
         }
