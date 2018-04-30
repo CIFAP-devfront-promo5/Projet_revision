@@ -1,51 +1,114 @@
+* {
+    font-size:20px;
+    padding-left: 0;
+}
+
 body {
     background-size: cover;
     font-family: Arial;
     text-align: left;
-}
-#container {
-    margin:0px auto;
-    margin-top: 0px;
-    padding:0;
-    width:1000px;
-    background-color: #f6f6f6;
-    display:block;
-    font-size: 0;
-    height:1200px;
-    background-image: url("images/cifap.jpg");
-    background-repeat: no-repeat;
+    background-color: #e2bfdf;
 }
 
+    header{
+        height: 100px;
+        width: 1000px;
+        background-color: #fff;
+        padding: 20px 0;
+    }
 
-header{
-    height: 100px;
-    width: 1000px;
-    background-color: #fff;
-    padding: 20px 0;
-}
-header img{
-    vertical-align: top;
-    height: 100px;
-    width: 100px;
-    margin: 0;
-}
-header h1{
-    color: #000;
-    font-size: 50px;
-    vertical-align: top;
-    display: inline-block;
+        header img{
+            vertical-align: top;
+            height: 100px;
+            width: 100px;
+            margin: 0;
+        }
+
+        header h1{
+            color: #000;
+            font-size: 50px;
+            vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            margin-left: 40px;
+            width:80%
+        }
+
+
+    #container {
+        margin:0 auto;
+        padding:0;
+        width:1000px;
+        background-color: #e2e1e0;
+        display:block;
+        font-size: 0;
+        height:1200px;
+    }
+
+        #container > img {
+            width:100%;
+        }
+
+        #container > h2 {
+            font-size: 28px;
+            text-align: center;
+            color: #101576;
+            height:100%;
+        }
+
+        #container > aside {
+            display: inline-block;
+            width: 20%;
+            background-color: #e2e1e0;
+            height:540px;
+        }
+
+            aside > ul{
+                vertical-align: top;
+                margin:0 0;
+                font-size:0;
+                padding:0;
+                list-style-type: none;
+            }
+
+            aside > ul > li{
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+
+            aside > ul > li > a {
+                text-decoration: none;
+                text-align: center;
+                display:block;
+                padding: 5px 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+
+            aside > ul > li > a:hover {
+                background-color: #d8a0f1;
+            }
+
+        main {
+            width:80%;
+            background-color: azure;
+            display: inline-block;
+            height:540px;
+            vertical-align: top;
+        }
+
+
+
+
+
+
+h2 {
     text-align: center;
-    margin-left: 40px;
-    width:80%
-}
-ul{
-    vertical-align: top;
-    margin:500px 0;
-    font-size:0;
-    padding:0;
-}
-li{
-    font-size: 25px;
-    font-weight: bold;
+    background-color: #101576;
+    color: white;
+    margin: 0;
+    padding: 10px;
 
 }
