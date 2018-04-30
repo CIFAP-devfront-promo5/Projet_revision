@@ -45,7 +45,7 @@ body {
         background-color: #e2e1e0;
         display:block;
         font-size: 0;
-        height:1200px;
+        height:1220px;
     }
 
         #container > img {
@@ -57,7 +57,7 @@ body {
             display: inline-block;
             width: 20%;
             background-color: #e2e1e0;
-            height:540px;
+            height:560px;
         }
 
             aside > h2 {
@@ -116,7 +116,7 @@ body {
             width:80%;
             background-color: azure;
             display: inline-block;
-            height:540px;
+            height:560px;
             vertical-align: top;
         }
 
