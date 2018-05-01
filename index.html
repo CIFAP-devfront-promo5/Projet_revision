@@ -8,51 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<<<<<<< HEAD
-    <div id="container">
-    	<header>
-    		<img src="images/gitdaftpunk.gif">
-    		<h1>Premier travail Collaboratif</h1>
-    	</header>
-        <img src="images/cifap.jpg" alt="">
-        <aside>
-            <h2>Contributeurs</h2>
-            <ul>
-                <li><a href="https://github.com/OdessaVega77">Nadia</a></li>
-                <li><a href="https://github.com/Nogaemi76">Emilie</a></li>
-                <li><a href="https://github.com/fvince25">Vincent</a></li>
-                <li><a href="https://github.com/Mehdiuchiwa">Mehdi</a></li>
-                <li><a href="https://github.com/Lootcho">Loutfi</a></li>
-                <li><a href="https://github.com/Lionel5656">Lionel</a></li>
-                <li><a href="https://github.com/jeanjean91">Jean</a></li>
-                <li><a href="https://github.com/mailye">Julie</a></li>
-            </ul>
-        </aside>
-        <main>
-        	<p>	salut tous le monde, je voulais vous proposer une petite liste des commandes les plus importantes
-        		à maitriser sur le terminal git afin de pouvoir faire des repository sur github.</p>
-        		<ul>
-        			<h3>Le terminal ( le git)</h3>
-        			<ol><strong>pwd+entrée</strong>= connaitre le répertoire courant</ol>
-        			<ol><strong>Ls +entrée</strong>=liste des fichiers et repertoire dans le dossier courant</ol>
-        			<ol><strong>cd+ du nom du fichier/repertoire</strong>s= permet de se déplacer dans les repertoires</ol>
-        			<ol><strong>touch+nom fichier</strong>=permet de creer un fichier directement du terminal</ol>
-        			<ol><stron>mkdir+nom/dossier</stron>= permet de creer des dossiers/repertoires</ol>
-        			<ol><strong>cat</strong>=afficher le contenu des dossiers</ol>
-        			<h3>configurer un git</h3>
-        			<ol><strong>git config --global user.name"votre pseudo"</strong>=configurer son pseudo</ol>
-        			<ol><strong>git config --global user.email"votre email"</strong>=configurer son email</ol>
-        			<h3>faire un commit</h3>
-        			<p><em>Avant de faire un commit, il faut creer un dossier et des fichier grace au commande(touch)</em></p>
-        			<ol><strong>git add .</strong>= rajouter un fichier</ol>
-        			<ol><strong>git commit -m,-a ou -m-a</strong>= enregistrer dans le reseau local</ol>
-        			<ol><strong>git log(qpour quitter le log)</strong>= vous permet de lire l'historique des derniers commit(modifications apportées)</ol>
-				</ul>
-
-        </main>
-		
-   </div>
-=======
 <div id="container">
     <header>
         <img src="images/gitdaftpunk.gif">
@@ -66,18 +21,14 @@
             <button id="stop">arretez le temps</button>
 
             <script>
-
                 var heure = document.getElementById('temps');
                 var tempsReel = setInterval(horloge, 1000);
                 var stop = document.getElementById('stop');
-
                 function horloge() {
                     var d = new Date()
                     heure.innerHTML = d.toLocaleTimeString();
                 }
-
                 stop.addEventListener('click', arret);
-
                 function arret() {
                     clearInterval(tempsReel);
                 }
@@ -108,9 +59,27 @@
         </ul>
     </aside>
     <main>
+        <p>	salut tous le monde, je voulais vous proposer une petite liste des commandes les plus importantes
+            à maitriser sur le terminal git afin de pouvoir faire des repository sur github.</p>
+        <ul>
+            <h3>Le terminal ( le git)</h3>
+            <ol><strong>pwd+entrée</strong>= connaitre le répertoire courant</ol>
+            <ol><strong>Ls +entrée</strong>=liste des fichiers et repertoire dans le dossier courant</ol>
+            <ol><strong>cd+ du nom du fichier/repertoire</strong>s= permet de se déplacer dans les repertoires</ol>
+            <ol><strong>touch+nom fichier</strong>=permet de creer un fichier directement du terminal</ol>
+            <ol><stron>mkdir+nom/dossier</stron>= permet de creer des dossiers/repertoires</ol>
+            <ol><strong>cat</strong>=afficher le contenu des dossiers</ol>
+            <h3>configurer un git</h3>
+            <ol><strong>git config --global user.name"votre pseudo"</strong>=configurer son pseudo</ol>
+            <ol><strong>git config --global user.email"votre email"</strong>=configurer son email</ol>
+            <h3>faire un commit</h3>
+            <p><em>Avant de faire un commit, il faut creer un dossier et des fichier grace au commande(touch)</em></p>
+            <ol><strong>git add .</strong>= rajouter un fichier</ol>
+            <ol><strong>git commit -m,-a ou -m-a</strong>= enregistrer dans le reseau local</ol>
+            <ol><strong>git log(qpour quitter le log)</strong>= vous permet de lire l'historique des derniers commit(modifications apportées)</ol>
+        </ul>
     </main>
 
 </div>
->>>>>>> 6487804e7aa09aca72ac06d1b79a4024e584600e
 </body>
 </html>
