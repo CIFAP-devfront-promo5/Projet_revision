@@ -57,7 +57,7 @@ body {
             display: inline-block;
             width: 20%;
             background-color: #e2e1e0;
-            height:560px;
+            height:600px;
         }
 
             aside > h2 {
@@ -116,8 +116,25 @@ body {
             width:80%;
             background-color: azure;
             display: inline-block;
-            height:560px;
+            height:600px;
             vertical-align: top;
         }
-
+    #horloge{
+        height: 100px;
+        width: 470px;
+        background-color: #61646c;
+        color: #fff; 
+        display: inline-block;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #stop {
+        height: 33px;
+        width: 160px;
+        background-color:#fb806a;
+        border-radius: 10px;
+        display: inline-block;
+        border: 1px solid transparent;
+        
+    }
 

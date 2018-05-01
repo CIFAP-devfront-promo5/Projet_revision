@@ -38,6 +38,30 @@
             </ul>
         </aside>
         <main>
+            <div id="horloge">
+                
+                <p> Il est :<samp id="temps"></samp></p>
+                <button id="stop">arretez le temps</button>
+
+                <script>
+                
+                var heure = document.getElementById('temps');
+                var tempsReel = setInterval(horloge, 1000);
+                var stop = document.getElementById('stop');
+
+                function horloge() {
+                    var d = new Date ()
+                    heure.innerHTML = d.toLocaleTimeString ();
+                }
+
+                stop.addEventListener ('click', arret);
+                function arret(){
+                    clearInterval(tempsReel);
+                }
+                </script>
+            </div>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.1IUZRjxbi6mdKK7tJQwOnQHaDS&pid=Api">
+            <br><br>
             Bonjour à tous, voici une modif potentiellement en conflit !
         </main>
 
