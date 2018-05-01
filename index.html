@@ -14,7 +14,31 @@
         <h1>Premier travail Collaboratif</h1>
         <a href="cifap.com"><img src="https://tse1.mm.bing.net/th?id=OIP.1IUZRjxbi6mdKK7tJQwOnQHaDS&pid=Api"></a>
     </header>
-    <img src="images/cifap.jpg" alt="">
+    <div id="banner">
+        <div id="horloge">
+
+            <p> Il est : <samp id="temps"></samp></p>
+            <button id="stop">arretez le temps</button>
+
+            <script>
+
+                var heure = document.getElementById('temps');
+                var tempsReel = setInterval(horloge, 1000);
+                var stop = document.getElementById('stop');
+
+                function horloge() {
+                    var d = new Date()
+                    heure.innerHTML = d.toLocaleTimeString();
+                }
+
+                stop.addEventListener('click', arret);
+
+                function arret() {
+                    clearInterval(tempsReel);
+                }
+            </script>
+        </div>
+    </div>
     <aside>
         <h2>Contributeurs</h2>
         <ul>
@@ -39,30 +63,6 @@
         </ul>
     </aside>
     <main>
-
-        <div id="horloge">
-
-            <p> Il est :<samp id="temps"></samp></p>
-            <button id="stop">arretez le temps</button>
-
-            <script>
-
-                var heure = document.getElementById('temps');
-                var tempsReel = setInterval(horloge, 1000);
-                var stop = document.getElementById('stop');
-
-                function horloge() {
-                    var d = new Date()
-                    heure.innerHTML = d.toLocaleTimeString();
-                }
-
-                stop.addEventListener('click', arret);
-
-                function arret() {
-                    clearInterval(tempsReel);
-                }
-            </script>
-        </div>
     </main>
 
 </div>
