@@ -7,7 +7,7 @@ body {
     background-size: cover;
     font-family: Arial;
     text-align: left;
-    background-color: #e2bfdf;
+    background-color: #2874A6;
 }
 
     header{
@@ -25,27 +25,31 @@ body {
         }
 
         header h1{
-            color: #000;
+            color: #CD7919;
             font-size: 50px;
             vertical-align: top;
             display: inline-block;
             text-align: center;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-left: 40px;
+            margin-bottom: 5px;
+            margin-top: 10px;
             width:80%
         }
 
 
 
-    #container {
+    	#container {
         margin:0 auto;
         padding:0;
         width:1000px;
         background-color: #e2e1e0;
         display:block;
         font-size: 0;
-        height:1200px;
-    }
+        height:1300px;
+
+    	}
 
         #container > img {
             width:100%;
@@ -55,14 +59,14 @@ body {
         #container > aside {
             display: inline-block;
             width: 20%;
-            background-color: #e2e1e0;
-            height:540px;
+            background-color: #9B9D9F;
+            height:640px;
         }
 
             aside > h2 {
                 font-size: 22px;
                 text-align: center;
-                background-color: #101576;
+                background-color: #CD7919;
                 color: white;
                 margin: 0;
                 padding: 15px 10px;
@@ -79,32 +83,58 @@ body {
                 aside > ul > li{
                     font-size: 25px;
                     font-weight: bold;
+                    padding-bottom: 10px;
+
                 }
 
 
                     aside > ul > li > a {
                         text-decoration: none;
+                        color: white;
                         text-align: center;
                         display:block;
-                        padding: 5px 10px;
+                        padding: 20px 20px;
                         width: 100%;
                         box-sizing: border-box;
                     }
 
 
                     aside > ul > li > a:hover {
-                        background-color: #d8a0f1;
+                        background-color: #2874A6;
                     }
+        
 
         main {
             width:80%;
             background-color: azure;
             display: inline-block;
-            height:540px;
+            height:640px;
             vertical-align: top;
+
         }
+        			main p{
+        				text-align: center;
+        				font-style: italic;
+        			}
 
+		        	main ul
+		        	{
+		        		font-size: 10px;
+		        		padding: 0;
+		        		margin-left: 15px;
 
+		        	}
+
+        	main>ul>h3{
+
+		        		font-size: 30px;
+		        		font-weight: 20px;
+		        		text-align: center;
+		        		color: #81B560;
+		        		margin-top: 20px;
+		        		margin-bottom: 10px;
+
+        			}
 
 
 
