@@ -1,6 +1,7 @@
 * {
     font-size:20px;
     padding-left: 0;
+    vertical-align: top;
 }
 
 body {
@@ -17,14 +18,19 @@ body {
         padding: 20px 0;
     }
 
+    #banner {
+        height:522px;
+        background-image: url("images/cifap.jpg");
+        background-size: cover;
+    }
+
         header img{
-            vertical-align: top;
             height: 100px;
-            width: 100px;
             margin: 0;
         }
 
         header h1{
+<<<<<<< HEAD
             color: #CD7919;
             font-size: 50px;
             vertical-align: top;
@@ -36,6 +42,16 @@ body {
             margin-bottom: 5px;
             margin-top: 10px;
             width:80%
+=======
+            color: #000;
+            font-size: 40px;
+            display: inline-block;
+            text-align: center;
+            letter-spacing: 2px;
+            margin: 10px 0;
+            width:66%;
+            box-sizing: border-box;
+>>>>>>> 6487804e7aa09aca72ac06d1b79a4024e584600e
         }
 
 
@@ -47,9 +63,14 @@ body {
         background-color: #e2e1e0;
         display:block;
         font-size: 0;
+<<<<<<< HEAD
         height:1300px;
 
     	}
+=======
+        height:1220px;
+    }
+>>>>>>> 6487804e7aa09aca72ac06d1b79a4024e584600e
 
         #container > img {
             width:100%;
@@ -59,20 +80,25 @@ body {
         #container > aside {
             display: inline-block;
             width: 20%;
+<<<<<<< HEAD
             background-color: #9B9D9F;
             height:640px;
+=======
+            background-color: #e2e1e0;
+            height:600px;
+>>>>>>> 6487804e7aa09aca72ac06d1b79a4024e584600e
         }
 
-            aside > h2 {
+            #container > aside > h2 {
                 font-size: 22px;
                 text-align: center;
                 background-color: #CD7919;
                 color: white;
-                margin: 0;
+                margin: 0 0 10px 0px;
                 padding: 15px 10px;
             }
 
-            aside > ul{
+            #container > aside > ul{
                 vertical-align: top;
                 margin:0 0;
                 font-size:0;
@@ -80,7 +106,7 @@ body {
                 list-style-type: none;
             }
 
-                aside > ul > li{
+                #container > aside > ul > li{
                     font-size: 25px;
                     font-weight: bold;
                     padding-bottom: 10px;
@@ -88,30 +114,61 @@ body {
                 }
 
 
-                    aside > ul > li > a {
+                    #container > aside > ul > li > a {
                         text-decoration: none;
+<<<<<<< HEAD
                         color: white;
                         text-align: center;
                         display:block;
                         padding: 20px 20px;
+=======
+                        display:block;
+                        text-align: left;
+                        display:block;
+                        padding: 10px 20px;
+>>>>>>> 6487804e7aa09aca72ac06d1b79a4024e584600e
                         width: 100%;
                         box-sizing: border-box;
+                        font-size: 0px;
                     }
 
 
+<<<<<<< HEAD
                     aside > ul > li > a:hover {
                         background-color: #2874A6;
+=======
+                    #container > aside > ul > li > a:hover {
+                        background-color: #d8a0f1;
+>>>>>>> 6487804e7aa09aca72ac06d1b79a4024e584600e
                     }
         
+
+                        #container > aside > ul > li > a > span {
+                            display: inline-block;
+                            width: 70%;
+                            font-size:22px;
+                            margin-top:7px;
+
+                        }
+
+                        #container > aside > ul > li > a > img {
+                            width:40px;
+                            border-radius: 50%;
+                        }
 
         main {
             width:80%;
             background-color: azure;
             display: inline-block;
+<<<<<<< HEAD
             height:640px;
+=======
+            height:600px;
+>>>>>>> 6487804e7aa09aca72ac06d1b79a4024e584600e
             vertical-align: top;
 
         }
+<<<<<<< HEAD
         			main p{
         				text-align: center;
         				font-style: italic;
@@ -133,13 +190,38 @@ body {
 		        		color: #81B560;
 		        		margin-top: 20px;
 		        		margin-bottom: 10px;
+=======
+    #horloge{
+        height: 100px;
+        width: 270px;
+        background-color: #61646c;
+        color: #fff; 
+        display: block;
+        padding:10px;
+        position:relative;
+            top:370px;
+            left:690px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #stop {
+        height: 33px;
+        width: 160px;
+        background-color:#fb806a;
+        border-radius: 10px;
+        display: inline-block;
+        border: 1px solid transparent;
+        
+    }
+
+    main {
+        width:80%;
+        background-color: azure;
+        display: inline-block;
+        height:600px;
+        vertical-align: top;
+    }
+>>>>>>> 6487804e7aa09aca72ac06d1b79a4024e584600e
 
         			}
 
-
-
-
-h2 {
-
-
-}
