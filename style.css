@@ -19,21 +19,19 @@ body {
     }
 
         header img{
-            vertical-align: top;
             height: 100px;
-            width: 100px;
             margin: 0;
         }
 
         header h1{
             color: #000;
-            font-size: 50px;
-            vertical-align: top;
+            font-size: 40px;
             display: inline-block;
             text-align: center;
-            letter-spacing: 4px;
-            margin-left: 40px;
-            width:80%
+            letter-spacing: 2px;
+            margin: 10px 0;
+            width:66%;
+            box-sizing: border-box;
         }
 
 
