@@ -11,46 +11,52 @@ body {
     background-color: #e2bfdf;
 }
 
-header{
-    height: 100px;
-    width: 1000px;
-    background-color: #fff;
-    padding: 20px 0;
-}
 
-#banner {
-    height:522px;
-    background-image: url("images/cifap.jpg");
-    background-size: cover;
-}
-
-header img{
-    height: 100px;
-    margin: 0;
-}
-
-header h1{
-    color: #000;
-    font-size: 40px;
-    display: inline-block;
-    text-align: center;
-    letter-spacing: 2px;
-    margin: 10px 0;
-    width:66%;
-    box-sizing: border-box;
-}
+    #container {
+        margin:0 auto;
+        padding:0;
+        width:1000px;
+        background-color: #e2e1e0;
+        display:block;
+        font-size: 0;
+        height:1220px;
+    }
 
 
+        header {
+            height: 100px;
+            width: 1000px;
+            background-color: #fff;
+            padding: 20px 0;
+        }
 
-#container {
-    margin:0 auto;
-    padding:0;
-    width:1000px;
-    background-color: #e2e1e0;
-    display:block;
-    font-size: 0;
-    height:1220px;
-}
+            header img{
+                height: 100px;
+                margin: 0;
+            }
+
+        header h1{
+            color: #000;
+            font-size: 40px;
+            display: inline-block;
+            text-align: center;
+            letter-spacing: 2px;
+            margin: 10px 0;
+            width:66%;
+            box-sizing: border-box;
+        }
+
+
+
+    #banner {
+        height:522px;
+        background-image: url("images/cifap.jpg");
+        background-size: cover;
+    }
+
+
+
+
 
 #container > img {
     width:100%;
