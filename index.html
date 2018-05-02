@@ -6,31 +6,49 @@
     <meta name="description" content="Notre page rigolote">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="style.css">
+    <script src="JS/jquery_min.js"></script>
+
 </head>
 <body>
 <div id="container">
     <header>
         <img src="images/gitdaftpunk.gif">
         <h1>Premier travail Collaboratif</h1>
-        <a href="cifap.com"><img src="https://tse1.mm.bing.net/th?id=OIP.1IUZRjxbi6mdKK7tJQwOnQHaDS&pid=Api"></a>
+        <a href="cifap.com">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.1IUZRjxbi6mdKK7tJQwOnQHaDS&pid=Api"></a>
     </header>
     <div id="banner">
         <div id="horloge">
 
             <p> Il est : <samp id="temps"></samp></p>
             <button id="stop">arretez le temps</button>
-
             <script>
                 var heure = document.getElementById('temps');
                 var tempsReel = setInterval(horloge, 1000);
-                var stop = document.getElementById('stop');
+                var start_stop = document.getElementById('stop');
+
                 function horloge() {
-                    var d = new Date()
+                    var d = new Date();
                     heure.innerHTML = d.toLocaleTimeString();
                 }
-                stop.addEventListener('click', arret);
-                function arret() {
-                    clearInterval(tempsReel);
+
+                start_stop.addEventListener('click', switch_start_stop);
+
+                function switch_start_stop() {
+                    if (!($(this).hasClass('stopped')))
+                    {
+                        $(this).addClass('stopped');
+                        $(this).text("Relancez le temps");
+                        $(this).css('background-color','#9BE298');
+                        clearInterval(tempsReel);
+                    }
+                    else
+                    {
+                        $(this).removeClass('stopped');
+                        $(this).text("Arrêtez le temps");
+                        $(this).css('background-color','#fb806a');
+                        tempsReel = setInterval(horloge, 1000);
+                    }
                 }
             </script>
         </div>

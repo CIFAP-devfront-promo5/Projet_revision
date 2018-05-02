@@ -131,25 +131,28 @@ main {
     box-sizing: border-box;
 }
 #horloge{
-    height: 100px;
+    /*height: 100px;*/
     width: 270px;
     background-color: #61646c;
     color: #fff;
     display: block;
     padding:10px;
     position:relative;
-    top:370px;
+    top:350px;
     left:690px;
     border-radius: 10px;
     text-align: center;
 }
 #stop {
-    height: 33px;
-    width: 160px;
+    /*height: 33px;*/
+    /*width: 200px;*/
+    padding:20px;
     background-color:#fb806a;
     border-radius: 10px;
     display: inline-block;
-    border: 1px solid transparent;
+    /*border: 1px solid transparent;*/
+    /*box-sizing: border-box;*/
+    cursor: pointer;
 
 }
 
