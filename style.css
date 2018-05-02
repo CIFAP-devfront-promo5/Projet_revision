@@ -67,7 +67,7 @@ body {
     display: inline-block;
     width: 20%;
     background-color: #e2e1e0;
-    height:600px;
+    height:900px;
 }
 
 #container > aside > h2 {
@@ -126,8 +126,9 @@ main {
     width:80%;
     background-color: azure;
     display: inline-block;
-    height:600px;
     vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
 }
 #horloge{
     height: 100px;
@@ -156,13 +157,14 @@ main {
     width: 80%;
     background-color: azure;
     display: inline-block;
-    height: 600px;
+    height: 900px;
     vertical-align: top;
 }
 
 main p {
     text-align: center;
     font-style: italic;
+     
 }
 
 main ul {
