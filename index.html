@@ -37,13 +37,19 @@
                 var offsetX;
 
                 start_stop.addEventListener('click', switch_start_stop);
-                $(window).scroll(handle_scroll);
-                $(window).bind('mousemove' , function(e) {
-                    var mouseX = e.clientX;
-                    var X_center = $("body").innerWidth()/2;
-                    offsetX = - parseFloat((mouseX - X_center)/15) + 'px ';
-                    $('body').css('background-position', offsetX + offsetY);
-                });
+
+                if (!!window.chrome && !!window.chrome.webstore) {
+                    $(window).scroll(handle_scroll);
+                }
+
+                    $(window).bind('mousemove' , function(e) {
+                        var mouseX = e.clientX;
+                        var X_center = $("body").innerWidth()/2;
+                        offsetX = - parseFloat((mouseX - X_center)/15) + 'px ';
+                        $('body').css('background-position', offsetX + offsetY);
+                    });
+
+
 
             </script>
         </div>
