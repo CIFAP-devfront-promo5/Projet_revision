@@ -6,31 +6,49 @@
     <meta name="description" content="Notre page rigolote">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="style.css">
+    <script src="JS/jquery_min.js"></script>
+
 </head>
 <body>
 <div id="container">
     <header>
         <img src="images/gitdaftpunk.gif">
         <h1>Premier travail Collaboratif</h1>
-        <a href="cifap.com"><img src="https://tse1.mm.bing.net/th?id=OIP.1IUZRjxbi6mdKK7tJQwOnQHaDS&pid=Api"></a>
+        <a href="cifap.com">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.1IUZRjxbi6mdKK7tJQwOnQHaDS&pid=Api"></a>
     </header>
     <div id="banner">
         <div id="horloge">
 
             <p> Il est : <samp id="temps"></samp></p>
             <button id="stop">arretez le temps</button>
-
             <script>
                 var heure = document.getElementById('temps');
                 var tempsReel = setInterval(horloge, 1000);
-                var stop = document.getElementById('stop');
+                var start_stop = document.getElementById('stop');
+
                 function horloge() {
-                    var d = new Date()
+                    var d = new Date();
                     heure.innerHTML = d.toLocaleTimeString();
                 }
-                stop.addEventListener('click', arret);
-                function arret() {
-                    clearInterval(tempsReel);
+
+                start_stop.addEventListener('click', switch_start_stop);
+
+                function switch_start_stop() {
+                    if (!($(this).hasClass('stopped')))
+                    {
+                        $(this).addClass('stopped');
+                        $(this).text("Relancez le temps");
+                        $(this).css('background-color','#9BE298');
+                        clearInterval(tempsReel);
+                    }
+                    else
+                    {
+                        $(this).removeClass('stopped');
+                        $(this).text("Arrêtez le temps");
+                        $(this).css('background-color','#fb806a');
+                        tempsReel = setInterval(horloge, 1000);
+                    }
                 }
             </script>
         </div>
@@ -78,8 +96,8 @@
             <p><em>Avant de faire un commit, il faut creer un dossier et des fichier grace au commande(touch)</em></p>
             <ol><strong>git add .</strong>= rajouter un fichier</ol>
             <ol><strong>git commit -m,-a ou -m-a</strong>= enregistrer dans le reseau local</ol>
-            <ol><strong>git log(qpour quitter le log)</strong>= vous permet de lire l'historique des derniers commit(modifications apportées)</ol>
-            <ol><strong>git log(qpour quitter le log)</strong>= vous permet de lire l'historique des derniers commit(modifications apportées)</ol>
+            <ol><strong>git log(Q pour quitter le log)</strong>= vous permet de lire l'historique des derniers commit(modifications apportées)</ol>
+            <ol><strong>git push -u origin master</strong>= envois le commit vers réseau distant(GITHUB)</ol>
         </ul>
             <textarea placeholder="Mes propositions d'améliorations"></textarea>
     </main>
