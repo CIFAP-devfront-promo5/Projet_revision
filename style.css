@@ -135,8 +135,9 @@ main {
     width: 270px;
     background-color: #61646c;
     color: #fff;
+    opacity: 0.7;
     display: block;
-    padding:10px;
+    padding:0px;
     position:relative;
     top:370px;
     left:690px;
@@ -146,7 +147,8 @@ main {
 #stop {
     height: 33px;
     width: 160px;
-    background-color:#fb806a;
+    background-color:#81B560;
+    color: #fff;
     border-radius: 10px;
     display: inline-block;
     border: 1px solid transparent;
@@ -164,6 +166,7 @@ main {
 main p {
     text-align: center;
     font-style: italic;
+    /*margin: 0;*/
      
 }
 
