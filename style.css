@@ -49,7 +49,22 @@ body {
             width:66%;
             box-sizing: border-box;
         }
+#container > header > ul{
+    padding: 0;
+    margin: 0 auto;
+    font-size: 0;
+    
+}
+#container > header > ul > li{
+    display:inline-block;
+    height: 30px;
+    width: 250px;
 
+}
+#jaune {background-color: #EADC15;}
+#rouge {background-color: #EF476F;}
+#bleu {background-color: #2F9ED6;}
+#vert {background-color: #06D6A0;}
 
 
     #banner {
