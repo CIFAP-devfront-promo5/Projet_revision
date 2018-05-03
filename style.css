@@ -8,7 +8,7 @@ body {
     background-size: cover;
     font-family: Arial;
     text-align: left;
-    background-color: #e2bfdf;
+    background-image: url("images/printemps.jpg");
 }
 
 
@@ -131,7 +131,7 @@ main {
     box-sizing: border-box;
 }
 #horloge{
-    height: 100px;
+    /*height: 100px;*/
     width: 270px;
     background-color: #61646c;
     color: #fff;
@@ -139,19 +139,28 @@ main {
     display: block;
     padding:0px;
     position:relative;
-    top:370px;
+    top:350px;
     left:690px;
     border-radius: 10px;
     text-align: center;
 }
 #stop {
+<<<<<<< HEAD
     height: 33px;
     width: 160px;
     background-color:#81B560;
     color: #fff;
+=======
+    /*height: 33px;*/
+    /*width: 200px;*/
+    padding:20px;
+    background-color:#fb806a;
+>>>>>>> 2bf971bb1d608bc26f8fc73c9600a300539056b3
     border-radius: 10px;
     display: inline-block;
-    border: 1px solid transparent;
+    /*border: 1px solid transparent;*/
+    /*box-sizing: border-box;*/
+    cursor: pointer;
 
 }
 
