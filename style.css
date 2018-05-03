@@ -71,12 +71,58 @@ body {
     #banner {
         height:522px;
         background-image: url("images/cifap.jpg");
-        background-size: cover;
+        background-size: 100%;
+        background-position: center;
     }
 
+    #banner:hover {
+        background-size: 200%;
+    }
+
+.zoomin {
+    -webkit-animation-name: become_big; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease-in-out;
+    animation-name: become_big;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.zoomout {
+    -webkit-animation-name: become_small; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease-in-out;
+    animation-name: become_small;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
 
 
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes become_big {
+    from {
+        background-size: 100%;}
+    to {background-size: 200%;}
+}
+
+/* Standard syntax */
+@keyframes become_big {
+    from {background-size: 100%;}
+    to {background-size: 200%;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes become_small {
+    from {background-size: 200%;}
+    to {background-size: 100%;}
+}
+
+/* Standard syntax */
+@keyframes become_small {
+    from {background-size: 200%;}
+    to {background-size: 100%;}
+}
 
 #container > img {
     width:100%;
