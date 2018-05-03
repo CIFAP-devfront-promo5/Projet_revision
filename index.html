@@ -7,6 +7,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="style.css">
     <script src="JS/jquery_min.js"></script>
+    <script src="JS/functions.js"></script>
 
 </head>
 <body>
@@ -32,30 +33,18 @@
                 var heure = document.getElementById('temps');
                 var tempsReel = setInterval(horloge, 1000);
                 var start_stop = document.getElementById('stop');
-
-                function horloge() {
-                    var d = new Date();
-                    heure.innerHTML = d.toLocaleTimeString();
-                }
+                var offsetY = 0;
+                var offsetX;
 
                 start_stop.addEventListener('click', switch_start_stop);
+                $(window).scroll(handle_scroll);
+                $(window).bind('mousemove' , function(e) {
+                    var mouseX = e.clientX;
+                    var X_center = $("body").innerWidth()/2;
+                    offsetX = - parseFloat((mouseX - X_center)/15) + 'px ';
+                    $('body').css('background-position', offsetX + offsetY);
+                });
 
-                function switch_start_stop() {
-                    if (!($(this).hasClass('stopped')))
-                    {
-                        $(this).addClass('stopped');
-                        $(this).text("Relancez le temps");
-                        $(this).css('background-color','#9BE298');
-                        clearInterval(tempsReel);
-                    }
-                    else
-                    {
-                        $(this).removeClass('stopped');
-                        $(this).text("Arrêtez le temps");
-                        $(this).css('background-color','#fb806a');
-                        tempsReel = setInterval(horloge, 1000);
-                    }
-                }
             </script>
         </div>
     </div>
