@@ -7,8 +7,8 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="style.css">
     <script src="JS/jquery_min.js"></script>
-    <script src="JS/functions.js"></script>
-
+    <script src="JS/script.js"></script>
+    <!--<script src="JS/functions.js"></script>-->
 </head>
 <body>
 <div id="container">
@@ -29,40 +29,7 @@
 
             <p> Il est : <samp id="temps"></samp></p>
             <button id="stop">arretez le temps</button>
-            <script>
-                var heure = document.getElementById('temps');
-                var tempsReel = setInterval(horloge, 1000);
-                var start_stop = document.getElementById('stop');
-                var offsetY = 0;
-                var offsetX;
 
-                start_stop.addEventListener('click', switch_start_stop);
-
-                if (!!window.chrome && !!window.chrome.webstore) {
-                    $(window).scroll(handle_scroll);
-                }
-
-                $(window).bind('mousemove' , function(e) {
-                    var mouseX = e.clientX;
-                    var X_center = $("body").innerWidth()/2;
-                    offsetX = - parseFloat((mouseX - X_center)/30) + 'px ';
-                    $('body').css('background-position', offsetX + offsetY);
-                });
-
-                $('#banner').hover(
-                    function () {
-                        $(this).addClass("zoomin").removeClass("zoomout");
-                    },
-                    function () {
-                        $(this).removeClass("zoomin").addClass("zoomout");
-                    }
-                )
-
-
-
-
-
-            </script>
         </div>
     </div>
     <aside>
