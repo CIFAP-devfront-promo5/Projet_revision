@@ -93,7 +93,7 @@ body {
     -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
     -webkit-animation-timing-function: ease-in-out;
     animation-name: become_small;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
 }
 
