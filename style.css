@@ -27,10 +27,10 @@ body {
 
 
         header {
-            height: 100px;
+            /*height: 100px;*/
             width: 1000px;
             background-color: #fff;
-            padding: 30px 0;
+            padding: 30px 0 0 0;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
         }
@@ -47,19 +47,32 @@ body {
             text-align: center;
             letter-spacing: 3px;
             margin: 20px 0;
-            width:66%;
-            box-sizing: border-box;
+            /*Width volontairement trop important,
+            le flex/flex-drection:row/flex-wrap:nowrap réajuste !*/
+            width:800px;
         }
+
+header > div {
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+
+
 #container > header > ul{
     padding: 0;
     margin: 0 auto;
     font-size: 0;
+    display:flex;
+    flex-wrap: nowrap;
     
 }
 #container > header > ul > li{
-    display:inline-block;
-    height: 30px;
-    width: 250px;
+    height: 20px;
+    /*width volontairement surévalué,
+    car réajusté grace au flex_wrap:nowrap du parent*/
+    width: 500px;
+    list-style-type: none;
 
 }
 #jaune {background-color: #EADC15;}
@@ -197,7 +210,6 @@ main {
     box-sizing: border-box;
 }
 #horloge{
-    /*height: 100px;*/
     width: 270px;
     background-color: #61646c;
     color: #fff;
@@ -212,18 +224,12 @@ main {
 }
 #stop {
 
-    /*height: 33px;*/
     width: 160px;
     color: #fff;
-    /*height: 33px;*/
-    /*width: 200px;*/
     padding:20px;
     background-color:#fb806a;
-
     border-radius: 10px;
     display: inline-block;
-    /*border: 1px solid transparent;*/
-    /*box-sizing: border-box;*/
     cursor: pointer;
 
 }
