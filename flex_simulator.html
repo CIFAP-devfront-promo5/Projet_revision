@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Simulator</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="JS/jquery_min.js"></script>
+    <script src="JS/script2.js"></script>
+</head>
+<body>
+<div id="container">
+    <header>
+        <h1>Flex Simulator</h1>
+    </header>
+    <main>
+        <section id="commands">
+            <h2>Propriétés :</h2>
+
+            <div><h3>flex-direction :</h3>
+                <select class="input_detect" name="" id="flex-direction">
+                    <option value="row">row</option>
+                    <option value="row-reverse">row-reverse</option>
+                    <option value="column">column</option>
+                    <option value="column-reverse">column-reverse</option>
+                </select></div>
+
+            <div><h3>flex-wrap :</h3>
+                <select class="input_detect" name="" id="flex-wrap">
+                    <option selected value="nowrap">nowrap</option>
+                    <option value="wrap">wrap</option>
+                    <option value="wrap-reverse">wrap-reverse</option>
+                </select></div>
+
+            <div><h3>justify-content :</h3>
+                <select class="input_detect" name="" id="justify-content">
+                    <option selected value="flex-start">Flex-start</option>
+                    <option value="flex-end">Flex-end</option>
+                    <option value="center">center</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                </select></div>
+
+            <div><h3>align-items :</h3>
+                <select class="input_detect" name="" id="align-items">
+                    <option value="flex-start">Flex-start</option>
+                    <option value="flex-end">Flex-end</option>
+                    <option value="center">center</option>
+                    <option selected value="stretch">stretch</option>
+                    <option value="baseline">baseline</option>
+                </select></div>
+
+            <div><h3>align-content :</h3>
+                <select class="input_detect" name="" id="align-content">
+                    <option value="flex-start">Flex-start</option>
+                    <option value="flex-end">Flex-end</option>
+                    <option value="center">center</option>
+                    <option selected value="stretch">stretch</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                </select></div>
+            <div>
+                <h3>Largeur standard</h3>
+                <input type="text" id="width" value="100">
+                <span> px</span>
+            </div>
+            <div>
+                <h3>Hauteur standard</h3>
+                <input type="text" id="height" value="75">
+                <span> px</span>
+            </div>
+            <div id="add_element">Ajouter élément</div>
+        </section>
+        <section id="cadre">
+            <div id="1">1 <img title="Supprimer" src="images/Delete.jpg"/></div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
