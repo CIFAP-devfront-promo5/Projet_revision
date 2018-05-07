@@ -1,58 +1,34 @@
 $(document).ready(
     function () {
 
+        // Valeurs par défaut :
 
         var height_1 = 75;
         var width_1 = 100;
 
+        var list_color = [
+            '#851515',
+            '#656028',
+           '#3343d1',
+           '#2db53b',
+           '#849d1c',
+           '#d24198',
+           '#6e0180',
+           '#317a17',
+           '#ec2774',
+           '#3c3841'
+        ];
+
+        //----------------------------------------------------------------
+        // Fonctions
+        //----------------------------------------------------------------
+
         function attr_css() {
-            $('#cadre').css(
-                $(this).attr('id') ,
-                $('#' + $(this).attr('id')).val()
-            );
-        }
 
-        function check_position_cursor_resize(event) {
+            var property = $(this).attr('id');
+            var value    = $('#' + $(this).attr('id')).val();
 
-            $(document).mousemove(function (event) {
-                var h = event.target.offsetHeight;
-
-
-                var w = event.target.offsetWidth;
-
-                var x = event.offsetX;
-                var y = event.offsetY;
-
-                // console.log('h:' + h, 'y:' + y, y > h - 10, y < h);
-
-
-                var ID = event.target.id;
-
-                var special_cursor = false;
-
-
-                if ((y > h - 10 && y < h - 5) && (x > w - 10 && x < w - 5)) {
-                    console.log('boubou');
-                    $('#' + ID).css("cursor", "nw-resize");
-                    special_cursor = true;
-                }
-
-                if (y > h - 10 && y < h) {
-                    $('#' + ID).css("cursor", "n-resize");
-                    special_cursor = true;
-                    console.log('baba');
-                }
-
-                if (x > w - 10 && x < w - 5) {
-                    $('#' + ID).css("cursor", "e-resize");
-                    special_cursor = true;
-                    console.log('babou');
-                }
-
-                if (!special_cursor) {
-                    $('#' + ID).css("cursor", "default");
-                }
-            });
+            $('#cadre').css(property , value);
 
         }
 
@@ -68,19 +44,33 @@ $(document).ready(
             var ID = event.target.id;
 
 
-            if((y > h - 10 && y < h - 5))
+            if((y > h - 12 && y < h - 3))
             {
-                $(document).mousemove(function(event) {
 
+                $(document).mousemove(function(event) {
+                    $("#cadre > div").off('mousedown');
+                    $('#' + ID).css("cursor", "n-resize");
                     $('#' + ID).append('<div class="temp_win"></div>');
-                    $('#' + ID + ' > .temp_win').css("height",event.offsetY);
+
+                    var height_;
+                    if (event.offsetY > 75)
+                        height_ = event.offsetY;
+                    else
+                        height_ = 75;
+
+                    $('#' + ID + ' > .temp_win').css("height",height_);
                     $('#' + ID + ' > .temp_win').css("width",$('#' + ID).css("width"));
 
 
                     $(document).mouseup(function() {
+                        $('#' + ID).css("cursor", "default");
                         $(document).off('mousemove');
-                        $('#' + ID).css("height",event.offsetY);
+                        $('#' + ID).css("height",height_);
                         $('#' + ID + ' > .temp_win').remove();
+                        $("#cadre > div").off('mousedown').on('mousedown',function(event)
+                        {
+                            check_position(event);
+                        });
                     })
 
                 })
@@ -88,41 +78,74 @@ $(document).ready(
 
             }
 
-            if((x > w - 10 && x < w - 5))
+            if((x > w - 12 && x < w - 3))
             {
                 $(document).mousemove(function(event) {
 
+                    var width_;
+                    if (event.offsetX > 100)
+                        width_ = event.offsetX;
+                    else
+                        width_ = 100;
+
+                    $("#cadre > div").off('mousedown');
+                    $('#' + ID).css("cursor", "e-resize");
                     $('#' + ID).append('<div class="temp_win"></div>');
-                    $('#' + ID + ' > .temp_win').css("width",event.offsetX);
+                    $('#' + ID + ' > .temp_win').css("width",width_);
                     $('#' + ID + ' > .temp_win').css("height",$('#' + ID).css("height"));
 
 
                     $('#' + ID ).children('img').css('right', 10);
                     $(document).mouseup(function() {
+                        $('#' + ID).css("cursor", "default");
                         $(document).off('mousemove');
                         $('#' + ID).children('img').css('right', 10);
                         $('#' + ID + ' > .temp_win').remove();
-                        $('#' + ID).css("width",event.offsetX);
+                        $('#' + ID).css("width",width_);
+                        $("#cadre > div").off('mousedown').on('mousedown',function(event)
+                        {
+                            check_position(event);
+                        });
 
                     })
 
                 })
             }
 
-            if((y > h - 10 && y < h - 5) && (x > w - 10 && x < w - 5))
+            if((y > h - 12 && y < h - 3) && (x > w - 12 && x < w - 3))
             {
                 $(document).mousemove(function(event) {
 
+                    $("#cadre > div").off('mousedown');
+                    var width_;
+                    if (event.offsetX > 100)
+                        width_ = event.offsetX;
+                    else
+                        width_ = 100;
+
+                    var height_;
+                    if (event.offsetY > 75)
+                        height_ = event.offsetY;
+                    else
+                        height_ = 75;
+
                     $('#' + ID).append('<div class="temp_win"></div>');
-                    $('#' + ID + ' > .temp_win').css("width",event.offsetX);
-                    $('#' + ID + ' > .temp_win').css("height",event.offsetY);
+                    $('#' + ID + ' > .temp_win').css("width",width_);
+                    $('#' + ID + ' > .temp_win').css("height",height_);
+                    $('#' + ID).css("cursor", "nw-resize");
 
                     $('#' + ID).children('img').css('right', 10);
                     $(document).mouseup(function() {
                         $(document).off('mousemove');
-                        $('#' + ID).css("height",event.offsetY);
-                        $('#' + ID).css("width",event.offsetX);
+                        $('#' + ID).css("height",height_);
+                        $('#' + ID).css("width",width_);
                         $('#' + ID + ' > .temp_win').remove();
+                        $('#' + ID).css("cursor", "default");
+
+                        $("#cadre > div").off('mousedown').on('mousedown',function(event)
+                        {
+                            check_position(event);
+                        });
 
                     })
 
@@ -131,10 +154,19 @@ $(document).ready(
 
         }
 
+        function modulo(x) {
+            x--;
+            while(x>8)
+                x = x - 9 ;
+            return x;
+        }
+
         function update_size() {
 
+            var prop = $(this).attr('id');
+
             if (parseFloat($(this).val()) > 50) {
-                var prop = $(this).attr('id');
+
                 var this_ = this;
                 $('#cadre > div').each(function () {
 
@@ -150,6 +182,16 @@ $(document).ready(
 
         }
 
+
+
+        //----------------------------------------------------------------
+        // LISTENERS
+        //----------------------------------------------------------------
+
+        //----------------------------------------------------------------
+        // Ajout d'élement
+        //----------------------------------------------------------------
+
         $('#add_element').on('click',function() {
             var last_value = $('#cadre > div:last-child').text();
             last_value++;
@@ -159,6 +201,7 @@ $(document).ready(
 
             $('#' + last_value).css('height', height_1);
             $('#' + last_value).css('width', width_1);
+            $('#' + last_value).css('background-color', list_color[modulo(last_value)]);
 
             $("#cadre > div > img").on("click",function() {
                 var Id_parent = $(this).parent().attr('id');
@@ -173,20 +216,33 @@ $(document).ready(
             $('#width , #height').off('keyup').on('keyup', update_size);
         });
 
+        //----------------------------------------------------------------
+        // Modification propriété
+        //----------------------------------------------------------------
+
+
         $('.input_detect').on('change',attr_css);
+
+        //----------------------------------------------------------------
+        // Modification live de width et height
+        //----------------------------------------------------------------
 
         $('#width , #height').on('keyup', update_size);
 
 
-        $("#cadre > div").on('mouseover',function(event)
-        {
-            check_position_cursor_resize(event);
-        });
 
-        $("#cadre > div").on('mousedown',function(event)
+        //----------------------------------------------------------------
+        // Resize des blocs
+        //----------------------------------------------------------------
+
+        $("#cadre > div").off('mousedown').on('mousedown',function(event)
         {
             check_position(event);
         });
+
+        //----------------------------------------------------------------
+        // Suppression d'un bloc
+        //----------------------------------------------------------------
 
         $("#cadre > div > img").on("click",function() {
             var Id_parent = $(this).parent().attr('id');

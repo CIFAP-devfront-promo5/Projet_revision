@@ -94,8 +94,12 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: #06D6A0;
-    border: 5px double grey;
+    border-right: 5px dashed black;
+    border-bottom: 5px dashed black;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
     position: relative;
+    color:white;
 }
 
 #cadre > div > img {
@@ -109,8 +113,11 @@ h2 {
 
 .temp_win {
     position:absolute;
+    top:0;
+    left:0;
     background-color: transparent;
     border:3px black dotted;
+    z-index: 3;
 }
 
 
