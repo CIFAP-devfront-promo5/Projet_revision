@@ -170,14 +170,14 @@ $(document).ready(
                 var this_ = this;
                 $('#cadre > div').each(function () {
 
-                    var is_std_size = eval('parseFloat($(this).css("' + prop + '")) ==' + prop + '_1');
+                    var is_std_size = eval('Math.floor(parseFloat($(this).css("' + prop + '"))) ==' + prop + '_1');
                     if (is_std_size) {
                         $(this).css(prop, $(this_).val());
                     }
                 });
 
-                width_1 = parseFloat($('#width').val());
-                height_1 = parseFloat($('#height').val());
+                width_1 = Math.floor(parseFloat($('#width').val()));
+                height_1 = Math.floor(parseFloat($('#height').val()));
             }
 
         }
@@ -196,7 +196,7 @@ $(document).ready(
             var last_value = $('#cadre > div:last-child').text();
             last_value++;
 
-            $('#cadre').append('<div id="' + last_value + '">' + last_value +
+            $('#cadre').append('<div class  ="noselect" unselectable="on" onselectstart="return false;" id="' + last_value + '">' + last_value +
                 '<img title = "supprimer" src="images/Delete.jpg"/></div>');
 
             $('#' + last_value).css('height', height_1);
@@ -238,6 +238,7 @@ $(document).ready(
         $("#cadre > div").off('mousedown').on('mousedown',function(event)
         {
             check_position(event);
+            return false;
         });
 
         //----------------------------------------------------------------

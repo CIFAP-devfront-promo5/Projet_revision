@@ -50,6 +50,14 @@ select {
 
 }
 
+.noselect {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
 #add_element {
     background-color: #06D6A0;
     color:white;
