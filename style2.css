@@ -22,7 +22,7 @@ body {
     margin:20px auto;
     box-sizing: border-box;
     border-radius: 5px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 
 }
 
@@ -56,6 +56,14 @@ select {
     -ms-user-select: none;
     user-select: none;
     -o-user-select: none;
+}
+
+.select {
+    -moz-user-select: auto;
+    -webkit-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+    -o-user-select: auto;
 }
 
 #add_element {
@@ -115,14 +123,81 @@ h2 {
     color:white;
 }
 
-#cadre > div > img {
+#cadre > div > i {
     position:absolute;
-    top:5px;
-    right:5px;
-    width:20px;
     cursor:pointer;
+    padding-right:2px;
+    padding-left:2px;
+    background-color: white;
+    color:grey;
+}
+
+#cadre > div > i.fa-times {
+    top:0;
+    right:0;
+}
+
+#cadre > div > i.fa-bars {
+    top:0;
+    left:0;
+}
+
+#menu {
+    position:absolute;
+    left:25px;
+    top:0;
+    width:180px;
+
+    color:black;
+    /*border:1px black solid;*/
+    background-color: #f2f1f0;
+    z-index: 10;
+    font-family: Calibri;
+    height: 180px;
+}
+
+
+
+
+#menu div > input {
+    width:50px;
+    color:black;
 
 }
+
+#menu > section {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    height:100%;
+    box-sizing: border-box;
+
+}
+
+section div {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+#valid_elem {
+    background-color: #06D6A0;
+    padding:10px;
+    border-radius: 10px;
+    width:100%;
+    text-align: center;
+    display: block;
+    margin:0 10px;
+}
+
+h4 {
+    display: inline-block;
+    font-size: 15px;
+}
+
 
 .temp_win {
     position:absolute;
