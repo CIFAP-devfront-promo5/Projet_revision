@@ -130,9 +130,14 @@ h2 {
     padding-left:2px;
     background-color: white;
     color:grey;
+    /*cursor: pointer;*/
 }
 
-#cadre > div > i.fa-times {
+#menu section div:first-child {
+    border-bottom: 2px solid #61646c;
+}
+
+#cadre > div > i.remove {
     top:0;
     right:0;
 }
@@ -146,14 +151,26 @@ h2 {
     position:absolute;
     left:25px;
     top:0;
-    width:180px;
+    width:200px;
 
     color:black;
     /*border:1px black solid;*/
     background-color: #f2f1f0;
     z-index: 10;
     font-family: Calibri;
-    height: 180px;
+    height: 280px;
+    display: none;
+}
+
+#menu select {
+    margin-right: 10px;
+    margin-left: 10px;
+    border:1px solid black;
+}
+
+.close {
+    padding:0 10px;
+    cursor: pointer;
 }
 
 
@@ -187,10 +204,12 @@ section div {
     background-color: #06D6A0;
     padding:10px;
     border-radius: 10px;
-    width:100%;
+    width:90%;
     text-align: center;
     display: block;
-    margin:0 10px;
+    margin:0 auto;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 h4 {

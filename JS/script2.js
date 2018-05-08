@@ -6,6 +6,7 @@ $(document).ready(
         var height_1 = 75;
         var width_1 = 100;
         var Id_mem;
+        var align_self_val = 'stretch';
 
         var list_color = [
             '#851515',
@@ -154,9 +155,13 @@ $(document).ready(
         }
 
         function valid_element() {
-            $('section input').each(function() {
-                if($(this).val().length > 0)
+            var i = 0;
+            $('#menu input , #menu select').each(function() {
+                console.log(Id_mem, this);
+
+                if($(this).val().length > 0 && i < 5)
                 {
+                    i++;
                     var property = $(this).attr('id');
                     var value_prop = $(this).val();
                     $('#' + Id_mem).css(property , value_prop);
@@ -195,6 +200,16 @@ $(document).ready(
 
         }
 
+        function iif($condition,$siok,$siko){
+            if ($condition == true)	return($siok);	else	return($siko);
+        }
+
+        function  isselected(align_self_val,value)
+        {
+            return iif(align_self_val == value , 'selected' , '');
+        }
+
+
 
 
         //----------------------------------------------------------------
@@ -210,45 +225,22 @@ $(document).ready(
             last_value++;
 
             $('#cadre').append('<div class  ="noselect" unselectable="on" onselectstart="return false;" id="' + last_value + '">' + last_value +
-                '<i title="Supprimer" class="fas fa-times"></i>' +
-                // '<i unselectable="off" onselectstart="" class="fas fa-bars select"></i>' +
+                '<i title="Supprimer" class="fas fa-times remove"></i>' +
+                '<i title="Propriétés enfant" class="fas fa-bars"></i>' +
                 '</div>');
 
             $('#' + last_value).css('height', height_1);
             $('#' + last_value).css('width', width_1);
             $('#' + last_value).css('background-color', list_color[modulo(last_value)]);
 
-            $("#cadre > div > .fa-times").on("click",function() {
+            $("#cadre > div > .remove").on("click",function() {
                 var Id_parent = $(this).parent().attr('id');
                 $("#" + Id_parent).remove();
             });
 
-            $("#cadre > div > .fa-bars").on("click",function() {
-                Id_mem = $(this).parent().attr('id');
-                    $(this).append(
-                        '<div id="menu">' +
-                        '<section>' +
-                        '   <div>' +
-                        '       <h4>order : </h4>' +
-                        '       <input type="text" name="" id="order">' +
-                        '   </div>'    +
-                        '   <div>' +
-                        '       <h4>flex-grow : </h4>' +
-                        '       <input type="text" name="" id="flex-grow">' +
-                        '   </div>' +
-                        '   <div>' +
-                        '       <h4>flex-shrink : </h4>' +
-                        '       <input type="text" name="" id="flex-shrink"></div>' +
-                        '   <div>' +
-                        '       <h4>flex-basis : </h4>' +
-                        '       <input type="text" name="" id="flex-basis">' +
-                        '   </div>' +
-                        '   <div id="valid_elem">OK</div>' +
-                        '</section>' +
-                        '</div>'
-                );
+            $("#cadre > div > .fa-bars").off("click").on("click",function(event) {
 
-                $('#valid_elem').on('click',valid_element);
+                handle_child_props(event, this)
                 
             });
 
@@ -289,38 +281,73 @@ $(document).ready(
         // Suppression d'un bloc
         //----------------------------------------------------------------
 
-        $("#cadre > div > .fa-times").on("click",function() {
+        $("#cadre > div > .remove").on("click",function() {
             var Id_parent = $(this).parent().attr('id');
             $("#" + Id_parent).remove();
         });
 
-        $("#cadre > div > .fa-bars").on("click",function() {
-            Id_mem = $(this).parent().attr('id');
-            $(this).append(
+        $("#cadre > div > .fa-bars").off("click").on("click", function (event) {
+            handle_child_props(event, this);
+        });
+
+        function handle_child_props (event, this_) {
+            Id_mem = $(this_).parent().attr('id');
+
+
+            align_self_val = $('#' + Id_mem).css('align-self');
+
+
+
+            $('body').append(
                 '<div id="menu">' +
                 '<section>' +
                 '   <div>' +
+                // '       <h4>Propriétés enfants<div>' +
+                '       <span style="text-align: center;">Propriétés enfants</span>' +
+                '       <i title="fermer" class="fas fa-times close"></i>' +
+                '   </div>'    +
+                '   <div>' +
                 '       <h4>order : </h4>' +
-                '       <input type="text" name="" id="order">' +
+                '       <input value = "' + $('#' + Id_mem).css('order') + '" type="text" name="" id="order">' +
                 '   </div>'    +
                 '   <div>' +
                 '       <h4>flex-grow : </h4>' +
-                '       <input type="text" name="" id="flex-grow">' +
+                '       <input value = "' + $('#' + Id_mem).css('flex-grow') + '" type="text" name="" id="flex-grow">' +
                 '   </div>' +
                 '   <div>' +
                 '       <h4>flex-shrink : </h4>' +
-                '       <input type="text" name="" id="flex-shrink"></div>' +
+                '       <input value = "' + $('#' + Id_mem).css('flex-shrink') + '" type="text" name="" id="flex-shrink"></div>' +
                 '   <div>' +
                 '       <h4>flex-basis : </h4>' +
-                '       <input type="text" name="" id="flex-basis">' +
+                '       <input  value = "' + $('#' + Id_mem).css('flex-basis') + '" type="text" name="" id="flex-basis">' +
+                '   </div>' +
+                '   <div>' +
+                '       <h4>align-self : </h4>' +
+                '       <select  type="text" name="" id="align-self">' +
+                    '       <option ' + isselected(align_self_val,'flex-start') + ' value="flex-start">flex-start</option>' +
+                    '       <option ' + isselected(align_self_val,'flex-end') + '  value="flex-end">flex-end</option>' +
+                    '       <option ' + isselected(align_self_val,'center') + '  value="center">center</option>' +
+                    '       <option ' + isselected(align_self_val,'stretch') + ' value="stretch">stretch</option>' +
+                    '       <option ' + isselected(align_self_val,'baseline') + ' value="baseline">baseline</option>' +
+                '       </select>' +
                 '   </div>' +
                 '   <div id="valid_elem">OK</div>' +
                 '</section>' +
                 '</div>'
-            )
-        });
+            );
 
-        $('#valid_elem').on('click',valid_element);
+            $('#menu').fadeIn(200);
 
+            $('#menu').css('left',event.clientX);
+            $('#menu').css('top',event.clientY + 15);
+            $('#valid_elem').off('click').on('click',valid_element);
+            $('.close').on('click',close_props);
+        };
+
+        function close_props() {
+
+            $('#menu').fadeOut(200);
+            $('#menu').remove();
+        }
 
     });
