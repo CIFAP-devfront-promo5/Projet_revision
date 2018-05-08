@@ -331,7 +331,7 @@ $(document).ready(
                     '       <option ' + isselected(align_self_val,'baseline') + ' value="baseline">baseline</option>' +
                 '       </select>' +
                 '   </div>' +
-                '   <div id="valid_elem">OK</div>' +
+                '   <div id="valid_elem"><h5>OK</h5></div>' +
                 '</section>' +
                 '</div>'
             );
