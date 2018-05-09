@@ -323,7 +323,7 @@ $(document).ready(
 
         $('#add_element').on('click',function() {
 
-            var last_value = $(this).attr('id');
+            var last_value = $('#cadre > div:last-child').text();
             last_value++;
 
             $('#cadre').append('<div class  ="noselect" unselectable="on" ' +
