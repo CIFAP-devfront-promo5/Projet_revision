@@ -8,6 +8,7 @@ html {
     vertical-align: top;
     margin-top:0;
     margin-bottom:0;
+    box-sizing: border-box;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
         margin:20px auto;
         box-sizing: border-box;
         border-radius: 5px;
-        overflow: hidden;
+        /*overflow: hidden;*/
         height:90%;
     }
 
@@ -73,7 +74,7 @@ body {
                     justify-content: flex-start;
                     align-items: stretch;
                     width: 25%;
-                    padding:15px;
+                    padding:20px;
                     box-sizing: border-box;
                     border-bottom: 2px solid #d8a0f1;
                     background: #f2f1f0;
@@ -88,10 +89,12 @@ body {
 
                     #commands h3 , #commands h2 {
                         padding:10px 10px 10px 0;
+                        min-width: 100px;
                     }
 
                     #commands > div {
                         display: flex;
+                        flex-wrap: wrap;
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
@@ -109,31 +112,29 @@ body {
                             box-sizing: border-box;
                         }
 
-                    main > #commands > div > select {
-                        height: 30px;
-                        width:40%;
-                        border: none;
-                        padding-left: 10px;
-                    }
-
-                    main > #commands > div > div {
-                        display: flex;
-                        align-items: center;
-                        height: 30px;
-                        width:40%;
-                        border: none;
-                    }
-
-                        main > #commands > div > div > span {
-                            margin-left:5px;
+                        #commands > div > select {
+                            height: 30px;
+                            width:120px;
+                            border: none;
+                            padding-left: 10px;
                         }
 
+                        #commands > div > div {
+                            display: flex;
+                            align-items: center;
+                            height: 30px;
+                            width:120px;
+                            border: none;
+                        }
+
+                            #commands > div > div > span {
+                                margin-left:5px;
+                            }
 
 
 
-#menu section div:first-child {
-    border-bottom: 2px solid #61646c;
-}
+
+
 
                 #cadre {
                     display: flex;
@@ -227,13 +228,7 @@ body {
         font-size: 20px;
     }
 
-        #menu section div:first-child {
-            border-bottom: 2px solid #61646c;
-            margin-top: 0;
-            padding-bottom: 15px;
-            align-items: flex-start;
 
-        }
 
 
         #menu select , #menu input{
@@ -263,6 +258,18 @@ body {
     align-items: center;
 
 }
+
+    #menu section div:first-child {
+        border-bottom: 2px solid #61646c;
+    }
+
+    #menu section div:first-child {
+        border-bottom: 2px solid #61646c;
+        margin-top: 0;
+        padding-bottom: 15px;
+        align-items: flex-start;
+
+    }
 
 #valid_elem {
     background-color: #06D6A0;

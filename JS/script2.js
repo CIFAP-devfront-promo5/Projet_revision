@@ -30,9 +30,16 @@ $(document).ready(
             var property = $(this).attr('id');
             var value    = $('#' + $(this).attr('id')).val();
 
+
+            $('.input_detect').each(function() {
+                $(this).css('background-color','white');
+            });
+            $(this).css('background-color' , '#F7FFB8');
+
             $('#cadre').css(property , value);
 
         }
+
 
 
         function check_position(event) {
@@ -209,94 +216,10 @@ $(document).ready(
             return iif(align_self_val == value , 'selected' , '');
         }
 
-
-
-
-        //----------------------------------------------------------------
-        // LISTENERS
-        //----------------------------------------------------------------
-
-        //----------------------------------------------------------------
-        // Ajout d'élement
-        //----------------------------------------------------------------
-
-        $('#add_element').on('click',function() {
-            var last_value = $('#cadre > div:last-child').text();
-            last_value++;
-
-            $('#cadre').append('<div class  ="noselect" unselectable="on" onselectstart="return false;" id="' + last_value + '">' + last_value +
-                '<i title="Supprimer" class="fas fa-times remove"></i>' +
-                '<i title="Propriétés enfant" class="fas fa-bars"></i>' +
-                '</div>');
-
-            $('#' + last_value).css('height', height_1);
-            $('#' + last_value).css('width', width_1);
-            $('#' + last_value).css('background-color', list_color[modulo(last_value)]);
-
-            $("#cadre > div > .remove").on("click",function() {
-                var Id_parent = $(this).parent().attr('id');
-                $("#" + Id_parent).remove();
-            });
-
-            $("#cadre > div > .fa-bars").off("click").on("click",function(event) {
-
-                handle_child_props(event, this)
-                
-            });
-
-            $("#cadre > div").off('mousedown').on('mousedown',function(event)
-            {
-                check_position(event);
-            });
-
-            $('#width , #height').off('keyup').on('keyup', update_size);
-        });
-
-        //----------------------------------------------------------------
-        // Modification propriété
-        //----------------------------------------------------------------
-
-
-        $('.input_detect').on('change',attr_css);
-
-        //----------------------------------------------------------------
-        // Modification live de width et height
-        //----------------------------------------------------------------
-
-        $('#width , #height').on('keyup', update_size);
-
-
-
-        //----------------------------------------------------------------
-        // Resize des blocs
-        //----------------------------------------------------------------
-
-        $("#cadre > div").off('mousedown').on('mousedown',function(event)
-        {
-            check_position(event);
-            return false;
-        });
-
-        //----------------------------------------------------------------
-        // Suppression d'un bloc
-        //----------------------------------------------------------------
-
-        $("#cadre > div > .remove").on("click",function() {
-            var Id_parent = $(this).parent().attr('id');
-            $("#" + Id_parent).remove();
-        });
-
-        $("#cadre > div > .fa-bars").off("click").on("click", function (event) {
-            handle_child_props(event, this);
-        });
-
         function handle_child_props (event, this_) {
             Id_mem = $(this_).parent().attr('id');
 
-
             align_self_val = $('#' + Id_mem).css('align-self');
-
-
 
             $('body').append(
                 '<div id="menu">' +
@@ -324,11 +247,11 @@ $(document).ready(
                 '   <div>' +
                 '       <h4>align-self : </h4>' +
                 '       <select  type="text" name="" id="align-self">' +
-                    '       <option ' + isselected(align_self_val,'flex-start') + ' value="flex-start">flex-start</option>' +
-                    '       <option ' + isselected(align_self_val,'flex-end') + '  value="flex-end">flex-end</option>' +
-                    '       <option ' + isselected(align_self_val,'center') + '  value="center">center</option>' +
-                    '       <option ' + isselected(align_self_val,'stretch') + ' value="stretch">stretch</option>' +
-                    '       <option ' + isselected(align_self_val,'baseline') + ' value="baseline">baseline</option>' +
+                '       <option ' + isselected(align_self_val,'flex-start') + ' value="flex-start">flex-start</option>' +
+                '       <option ' + isselected(align_self_val,'flex-end') + '  value="flex-end">flex-end</option>' +
+                '       <option ' + isselected(align_self_val,'center') + '  value="center">center</option>' +
+                '       <option ' + isselected(align_self_val,'stretch') + ' value="stretch">stretch</option>' +
+                '       <option ' + isselected(align_self_val,'baseline') + ' value="baseline">baseline</option>' +
                 '       </select>' +
                 '   </div>' +
                 '   <div id="valid_elem"><h5>OK</h5></div>' +
@@ -349,5 +272,93 @@ $(document).ready(
             $('#menu').fadeOut(200);
             $('#menu').remove();
         }
+
+
+        function listeners_refresh()
+        {
+            //----------------------------------------------------------------
+            // Suppression d'un élément
+            //----------------------------------------------------------------
+
+            $("#cadre > div > .remove").off("click").on("click",function() {
+                var Id_parent = $(this).parent().attr('id');
+                $("#" + Id_parent).remove();
+            });
+
+
+            //----------------------------------------------------------------
+            // Propriétés enfant
+            //----------------------------------------------------------------
+
+            $("#cadre > div > .fa-bars").off("click").on("click",function(event) {
+
+                handle_child_props(event, this)
+
+            });
+
+            //----------------------------------------------------------------
+            // Resize des blocs
+            //----------------------------------------------------------------
+
+            $("#cadre > div").off('mousedown').on('mousedown',function(event)
+            {
+                check_position(event);
+            });
+
+            //----------------------------------------------------------------
+            // Modification live de width et height
+            //----------------------------------------------------------------
+
+            $('#width , #height').off('keyup').on('keyup', update_size);
+        }
+
+
+        //----------------------------------------------------------------
+        // LISTENERS
+        //----------------------------------------------------------------
+
+        //----------------------------------------------------------------
+        // Ajout d'élement
+        //----------------------------------------------------------------
+
+        $('#add_element').on('click',function() {
+
+            var id_max = 0;
+            $('#cadre > div').each(function() {
+                var id = $(this).attr('id');
+
+                if (id > id_max)
+                {
+                    id_max = id;
+                }
+
+            });
+            var last_value = id_max;
+            last_value++;
+
+            $('#cadre').append('<div class  ="noselect" unselectable="on" ' +
+                'onselectstart="return false;" id="' + last_value + '">' + last_value +
+                '<i title="Supprimer" class="fas fa-times remove"></i>' +
+                '<i title="Propriétés enfant" class="fas fa-bars"></i>' +
+                '</div>');
+
+            $('#' + last_value).css('height', height_1);
+            $('#' + last_value).css('width', width_1);
+            $('#' + last_value).css('background-color', list_color[modulo(last_value)]);
+
+
+            //----------------------------------------------------------------
+            // Refresh listeners "element"
+            //----------------------------------------------------------------
+
+            listeners_refresh();
+        });
+
+        //----------------------------------------------------------------
+        // Modification propriété
+        //----------------------------------------------------------------
+
+
+        $('.input_detect').on('change',attr_css);
 
     });
