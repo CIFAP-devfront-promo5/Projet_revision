@@ -323,17 +323,7 @@ $(document).ready(
 
         $('#add_element').on('click',function() {
 
-            var id_max = 0;
-            $('#cadre > div').each(function() {
-                var id = $(this).attr('id');
-
-                if (id > id_max)
-                {
-                    id_max = id;
-                }
-
-            });
-            var last_value = id_max;
+            var last_value = $(this).attr('id');
             last_value++;
 
             $('#cadre').append('<div class  ="noselect" unselectable="on" ' +
