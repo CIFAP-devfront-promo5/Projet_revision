@@ -131,10 +131,10 @@ body {
                                 margin-left:5px;
                             }
 
+                .blocs {
+                    transition:all 0.5s ease-in-out;
 
-
-
-
+                }
 
                 #cadre {
                     display: flex;

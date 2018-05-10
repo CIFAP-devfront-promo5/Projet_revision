@@ -326,7 +326,7 @@ $(document).ready(
             var last_value = $('#cadre > div:last-child').text();
             last_value++;
 
-            $('#cadre').append('<div class  ="noselect" unselectable="on" ' +
+            $('#cadre').append('<div class  ="blocs noselect" unselectable="on" ' +
                 'onselectstart="return false;" id="' + last_value + '">' + last_value +
                 '<i title="Supprimer" class="fas fa-times remove"></i>' +
                 '<i title="Propriétés enfant" class="fas fa-bars"></i>' +
