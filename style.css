@@ -21,7 +21,7 @@ body {
     background-color: #e2e1e0;
     display: block;
     font-size: 0;
-    height: 1220px;
+    height: 950px;
     border-radius: 20px;
 
 }
@@ -89,57 +89,16 @@ header > div {
         background-image: url("images/cifap.jpg");
         background-size: 100%;
         background-position: center;
+        opacity: 0.5;
+        transition:all 1s ease-in-out;
     }
 
     #banner:hover {
         background-size: 200%;
+        opacity: 1;
     }
 
-.zoomin {
-    -webkit-animation-name: become_big; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-    -webkit-animation-timing-function: ease-in-out;
-    animation-name: become_big;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
 
-.zoomout {
-    -webkit-animation-name: become_small; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-    -webkit-animation-timing-function: ease-in-out;
-    animation-name: become_small;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    opacity: 0.5;
-}
-
-
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes become_big {
-    from {
-        background-size: 100%;}
-    to {background-size: 200%;}
-}
-
-/* Standard syntax */
-@keyframes become_big {
-    from {background-size: 100%;}
-    to {background-size: 200%;}
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes become_small {
-    from {background-size: 200%;}
-    to {background-size: 100%;}
-}
-
-/* Standard syntax */
-@keyframes become_small {
-    from {background-size: 200%;}
-    to {background-size: 100%;}
-}
 
 #container > img {
     width:100%;
@@ -147,10 +106,9 @@ header > div {
 
 #container > aside {
     display: inline-block;
-    width: 20%;
+    width: 22%;
     background-color: #e2e1e0;
-    height:600px;
-    overflow: scroll;
+    height:100%;
 }
 
 #container > aside > h2 {
@@ -167,7 +125,10 @@ header > div {
     margin:0;
     font-size:0;
     padding:0;
-    list-style-type: none; 
+    list-style-type: none;
+    overflow: auto;
+    height:94%;
+    box-sizing: border-box;
 }
 
 #container > aside > ul > li{
@@ -196,7 +157,7 @@ header > div {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     background: #e2e1e0;
-  
+
 }
 @keyframes anim{
     0%{
@@ -237,14 +198,13 @@ header > div {
 }
 
 main {
-    width:80%;
+    width:78%;
     background-color: azure;
     display: inline-block;
     vertical-align: top;
     padding: 10px;
     box-sizing: border-box;
-    height: 600px;
-    overflow: scroll;
+    height: 100%;
 }
 #horloge{
     width: 270px;

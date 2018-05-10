@@ -53,12 +53,4 @@ $(document).ready(
         });
 
 
-        $('#banner').hover(
-            function () {
-                $(this).addClass("zoomin").removeClass("zoomout");
-            },
-            function () {
-                $(this).removeClass("zoomin").addClass("zoomout");
-            }
-        );
     });
