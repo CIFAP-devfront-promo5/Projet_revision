@@ -1,0 +1,38 @@
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Neutraface';
+    font-style: normal;
+    font-weight: 400;
+    src: url('NeutrafaceCondensedPS-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'dosis';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Dosis-Medium.woff2') format('woff2');
+}
+
+
+
+/*!* vietnamese *!*/
+/*@font-face {*/
+    /*font-family: 'Pangolin';*/
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+    /*src: local('Pangolin-Regular'), url(https://fonts.gstatic.com/s/pangolin/v3/cY9GfjGcW0FPpi-tWMfC79zqiA.woff2) format('woff2');*/
+/*}*/
+/*!* latin-ext *!*/
+/*@font-face {*/
+    /*font-family: 'Pangolin';*/
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+    /*src: url(https://fonts.gstatic.com/s/pangolin/v3/cY9GfjGcW0FPpi-tWMfD79zqiA.woff2) format('woff2');*/
+/*}*/
+/*!* latin *!*/
+/*@font-face {*/
+    /*font-family: 'Pangolin';*/
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+    /*src: url(https://fonts.gstatic.com/s/pangolin/v3/cY9GfjGcW0FPpi-tWMfN79w.woff2) format('woff2');*/
+/*}*/
