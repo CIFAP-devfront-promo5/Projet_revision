@@ -3,22 +3,34 @@
 <head>
     <title>Ressources humaines et management des organisations |
         Resonances</title>
+
+    <!--META-->
+
     <meta charset="UTF-8">
     <meta name="descriptions" content="">
     <meta name="description"
           content="Analyse stratégie et relations sociales Ressources
           humaines management et Organisation. Henri Vacquin, Didier Morfoisse,
           Dominique Legrand.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--DECLARE CSS-->
+
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    <!--A mettre avant le css-->
-
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
           crossorigin="anonymous">
+
+    <!--A mettre avant le css-->
+
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--DECLARE JS-->
+
     <script src="assets/js/jquery_min.js"></script>
     <script src="assets/js/script.js"></script>
 
@@ -27,47 +39,40 @@
 <body>
 
     <section id="fixed_navbar">
-        <div class="center_1050px">
+        <div class="center_static_resp">
+            <img src="images/LOGO-complet.png"/>
             <ul>
-                <li>
-                    <img src="images/LOGO_LIGHT.png" height="41" width="181"/>
-                </li>
                 <li data-target="#presentation">
                     <a href="#">présentation</a>
-                    <img src="images/logo-sticky-nav.png" height="25"
-                         width="37"/>
+
                 </li>
                 <li data-target="#expertise">
                     <a href="#"> notre expertise</a>
-                    <img src="images/logo-sticky-nav.png" height="25"
-                         width="37"/>
+
                 </li>
                 <li data-target="#equipe">
                     <a href="#"> l'équipe</a>
-                    <img src="images/logo-sticky-nav.png" height="25"
-                         width="37"/>
+
                 </li>
                 <li data-target="#partenaires">
                     <a href="#"> notre expérience</a>
-                    <img src="images/logo-sticky-nav.png" height="25"
-                         width="37"/>
+
                 </li>
                 <li data-target="#reseau">
                     <a href="#">réseau</a>
-                    <img src="images/logo-sticky-nav.png" height="25"
-                         width="37"/>
+
                 </li>
                 <li data-target="#actualites">
                     <a>actualités</a>
-                    <img src="images/logo-sticky-nav.png" height="25"
-                         width="37"/>
+
                 </li>
                 <li>
                     <a href="#contact">contact</a>
-                    <img src="images/logo-sticky-nav.png" height="25"
-                         width="37"/>
+
                 </li>
             </ul>
+            <div class="burger">menu <i class="fas fa-bars"></i></div>
+
         </div>
     </section>
 
@@ -75,6 +80,8 @@
         <div class="personnes"></div>
         <div class="personnes"></div>
         <div class="personnes"></div>
+
+        <div class="burger_absolute">menu <i class="fas fa-bars"></i></div>
 
         <div class="plan_avant">
             <img id="logo" src="images/LOGO-complet-blanc.png">
@@ -111,8 +118,6 @@
         </div>
 
     </section>
-
-
 
 
     <section id="presentation">
@@ -174,8 +179,6 @@
             </div>
         </div>
     </section>
-
-
 
 
     <section id="expertise">
@@ -426,8 +429,6 @@
     </section>
 
 
-
-
     <section id="equipe">
         <div class="center_1050px">
             <h3>La réunion de trois personalités</h3>
@@ -481,10 +482,13 @@
                     <div class="right_bord"></div>
                     <div class="bottom_bord"></div>
                     <h5>Henri Vacquin</h5>
-                    <p>Sociologue des organisations,
+                    <p class="titres">Sociologue des organisations,
                         analyste des conflits du travail</p>
-                    <a href="#">en savoir +</a>
-
+                    <div class="savoir_stat">
+                        <div class="savoir_cont">
+                            <a href="#">en savoir +</a>
+                        </div>
+                    </div>
                 </div>
                 <div id="secondguy" class="guys animated fadeInUp">
                     <img src="images/IMGman-no-moustache.png"/>
@@ -493,13 +497,17 @@
                     <div class="right_bord"></div>
                     <div class="bottom_bord"></div>
                     <h5>Didier Morfoisse</h5>
-                    <p>Stratégie sociale et ressources humaines
+                    <p class="titres">Stratégie sociale et ressources humaines
                         Elaboration et conduite de projets d’entreprise et de
                         politiques du changement
                         Médiateur certifié « Resolvers »,
                         Président de l’Association Nationale des Médiateurs,
                         Coaching de dirigeants. Recrutement</p>
-                    <a href="#">en savoir +</a>
+                    <div class="savoir_stat">
+                        <div class="savoir_cont">
+                            <a href="#">en savoir +</a>
+                        </div>
+                    </div>
                 </div>
                 <div id="thirdguy" class="guys animated fadeInUp">
                     <img src="images/IMG-man-moustache.png"/>
@@ -508,40 +516,42 @@
                     <div class="right_bord"></div>
                     <div class="bottom_bord"></div>
                     <h5>Dominique Legrand</h5>
-                    <p>Stratégie sociale, accompagnement de la négociation,
+                    <p class="titres">Stratégie sociale, accompagnement de la
+                        négociation,
                         médiation de conflits du travail, organisation et
                         conduite du changement, gestion des ressources humaines,
                         communication, coaching, recrutement</p>
-                    <a href="#">en savoir +</a>
+                    <div class="savoir_stat">
+                        <div class="savoir_cont">
+                            <a href="#">en savoir +</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </div>
     </section>
-
-
 
 
     <section id="partenaires">
         <div class="center_1050px">
             <h3 class="center">notre expérience</h3>
             <h1>Ils nous ont fait confiance</h1>
-            <div id="nav_bar_partners">
+            <div id="nav_bar_full">
                 <img src="images/ICO-arrow-bottom-black.png"/>
-                <img src="images/LOGO-channel.png"/>
-                <img src="images/LOGO-kronenbourgv2.png"/>
-                <img src="images/LOGO-bourgeois.png"/>
-                <img src="images/LOGO-siemensv2.png"/>
-                <img src="images/LOGO-dow.png"/>
+                <div id="nav_bar_partners">
+                    <img src="images/LOGO-channel.png"/>
+                    <img src="images/LOGO-kronenbourgv2.png"/>
+                    <img src="images/LOGO-bourgeois.png"/>
+                    <img src="images/LOGO-siemensv2.png"/>
+                    <img src="images/LOGO-dow.png"/>
+                </div>
                 <img src="images/ICO-arrow-bottom-black.png"/>
             </div>
 
 
+
         </div>
     </section>
-
-
 
 
     <section id="clin_oeil">
@@ -619,8 +629,6 @@
     </section>
 
 
-
-
     <section id="reseau">
         <div class="center_1050px">
             <h3>travailler en synergie</h3>
@@ -644,8 +652,6 @@
 
         </div>
     </section>
-
-
 
 
     <section id="actualites">
@@ -770,8 +776,6 @@
     </section>
 
 
-
-
     <section id="contact">
         <div class="center_1050px">
             <h3 class="center">n'hésitez plus</h3>
@@ -787,28 +791,31 @@
 
                     <p>votre message</p>
                     <textarea type="text"></textarea>
-                    <div class="alignright">
+                    <div class="resp_align">
                         <a href="#">envoyer</a>
                     </div>
                 </form>
                 <div class="animated fadeInRight">
-                    <p>RESONANCES</p>
-                    <p>
-                        <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;
-                        54 rue de Buzenval - 75020 Paris
-                    </p>
-                    <p>
-                        <i class="fas fa-phone"></i>&nbsp;&nbsp;
-                        +33 6 80 30 64 11
-                    </p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+33 6 78
-                        44 24 33 </p>
+                    <div>
+                        <div class="center">
+                            <h5>RESONANCES</h5>
+                        </div>
+                        <p>
+                            <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;
+                            54 rue de Buzenval - 75020 Paris
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>&nbsp;&nbsp;
+                            +33 6 80 30 64 11
+                        </p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+33 6
+                            78
+                            44 24 33 </p>
+                    </div>
                 </div>
             </article>
         </div>
     </section>
-
-
 
 
     <section id="footer">
@@ -835,8 +842,6 @@
     </section>
 
 
-
-
     <section id="credits">
         <div class="center_1050px">
             © RESONANCES. Tous droits réservés 2015 | Création graphique – Sarah
@@ -845,30 +850,22 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-    <div data-target="firstguy" class="full_screen_pres">
-        <div class="half_size_img">
-            <img src="images/Vacquin-bio.jpg" height="972" width="650"/>
-        </div>
-    </div>
-    <div data-target="secondguy" class="full_screen_pres">
-        <div class="half_size_img">
-            <img src="images/Morfoisse-bio.jpg" height="972"
-                 width="650"/>
-        </div>
-    </div>
-    <div data-target="thirdguy" class="full_screen_pres">
-        <div class="half_size_img">
-            <img src="images/Legrand-bio.jpg" height="972" width="650"/>
-        </div>
-    </div>
+    <!--<div data-target="firstguy" class="full_screen_pres">-->
+    <!--<div class="half_size_img">-->
+    <!--<img src="images/Vacquin-bio.jpg" height="972" width="650"/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div data-target="secondguy" class="full_screen_pres">-->
+    <!--<div class="half_size_img">-->
+    <!--<img src="images/Morfoisse-bio.jpg" height="972"-->
+    <!--width="650"/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div data-target="thirdguy" class="full_screen_pres">-->
+    <!--<div class="half_size_img">-->
+    <!--<img src="images/Legrand-bio.jpg" height="972" width="650"/>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</div>-->
 </body>
 </html>
