@@ -662,7 +662,7 @@
             <article>
                 <!---->
                 <img class="animated fadeInLeft"
-                     src="images/automobile.jpg" height="439" width="456"/>
+                     src="images/automobile.jpg"/>
                 <!---->
                 <div class="animated fadeInRight">
                     <h3>18 avril 2016</h3>
@@ -696,8 +696,7 @@
 
             <article>
                 <!--class = "animated fadeInRight"-->
-                <img class="animated fadeInLeft" src="images/cgt.jpg"
-                     height="456" width="456"/>
+                <img class="animated fadeInLeft" src="images/cgt.jpg"/>
                 <div class="animated fadeInRight">
                     <!--<div class = "animated fadeInLeft">-->
                     <h3>27 octobre 2015</h3>
@@ -732,9 +731,7 @@
             <article>
                 <!--class = "animated fadeInLeft"-->
                 <img class="animated fadeInLeft"
-                     src="images/opera_garnier.jpg"
-                     height="456"
-                     width="456"/>
+                     src="images/opera_garnier.jpg"/>
                 <div class="animated fadeInRight">
                     <h3>12 janvier 2015</h3>
                     <h1>DRH à l’Opéra de Paris : un métier pas comme les
@@ -783,13 +780,33 @@
             <article>
                 <form action="" class="animated fadeInLeft">
 
-                    <input type="text" placeholder="votre nom">
-                    <input type="text" placeholder="votre E-mail">
-                    <input type="text" placeholder="votre téléphone">
-                    <input type="text" placeholder="votre fonction">
-                    <input type="text" placeholder="votre entreprise">
+                    <div class="input_container">
+                        <input id="first" type="text">
+                        <label for="first">votre nom</label>
+                    </div>
+
+                    <div class="input_container">
+                        <input id="second" type="text">
+                        <label for="second">votre E-mail</label>
+                    </div>
+
+                    <div class="input_container">
+                        <input id="third" type="text">
+                        <label for="third">votre téléphone</label>
+                    </div>
+
+                    <div class="input_container">
+                        <input id="fourth" type="text">
+                        <label for="fourth">votre fonction</label>
+                    </div>
+
+                    <div class="input_container">
+                        <input id="fifth" type="text">
+                        <label for="fifth">votre entreprise</label>
+                    </div>
 
                     <p>votre message</p>
+
                     <textarea type="text"></textarea>
                     <div class="resp_align">
                         <a href="#">envoyer</a>
